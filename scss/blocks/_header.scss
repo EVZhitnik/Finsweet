@@ -1,0 +1,70 @@
+@use 'helpers' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation-name: scrolling-header;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(100) rem(200);
+    background-color: var(--color-black);
+    padding-block: rem(12);
+    color: var(--color-light);
+
+    @keyframes scrolling-header {
+        to {
+            box-shadow: 0 0 1rem 0 var(--color-dark-40);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(16);
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        column-gap: rem(32);
+
+        @include mobile {
+            position: fixed;
+            inset: 0;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 2rem;
+            padding: 1rem;
+            background-color: var(--color-black);
+            transition-duration: var(--transition-duration);
+
+            &:not(.is-active) {
+               @include hide;
+               
+               translate: 100%;
+            }
+        }
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            gap: rem(24);
+
+            @include mobile {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        &-link {
+            color: var(--color-light);
+
+            @include hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+}

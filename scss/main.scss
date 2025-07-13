@@ -4,6 +4,10 @@
 @use 'utils';
 @use 'globals';
 
+@use 'blocks/header.scss';
+@use 'blocks/button-menu.scss';
+@use 'blocks/burger-button.scss';
+
 // .header,
 // main > *:not(:last-child),
 // .footer {
