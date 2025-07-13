@@ -1,0 +1,96 @@
+@use 'helpers' as *;
+
+html {
+    &.is-lock {
+        overflow: hidden
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    font-size: rem(16);
+    line-height: 1.75;
+    color: var(--color-medium-grey);
+    background-color: var(--color-light);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-weight: 700;
+    font-family: var(--font-family-heading);
+    color: var(--color-black);
+}
+
+h1, .h1,
+h2, .h2,
+h4, .h4 {
+    line-height: 1.33;
+}
+
+h1, .h1 {
+    @include fluid-text(48, 28);
+
+    letter-spacing: -0.04em;
+}
+
+h2, .h2 {
+    @include fluid-text(36, 24);
+    
+    letter-spacing: -0.06em;
+}
+
+h3, .h3 {
+    @include fluid-text(28, 20);
+
+    line-height: 1.43;
+    letter-spacing: -0.04em;
+}
+
+h4, .h4 {
+    @include fluid-text(24, 18);
+}
+
+h5, .h5 {
+    @include fluid-text(20, 18);
+
+    line-height: 1.6;
+}
+
+h6, .h6 {
+    font-size: rem(16);
+    line-height: 1.5;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-accent);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+:focus-visible {
+    outline: rem(2) dashed var(--color-light);
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+}
