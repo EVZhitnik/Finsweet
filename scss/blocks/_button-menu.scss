@@ -1,0 +1,16 @@
+@use 'helpers' as *;
+
+.button-menu {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 1.33;
+    color: var(--color-black);
+    background-color: var(--color-light);
+    padding: rem(16) rem(48);
+    border: none;
+
+    @include hover {
+        background-color: var(--color-accent);
+    }
+}
