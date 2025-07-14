@@ -1,0 +1,43 @@
+@use 'helpers' as *;
+
+.card-categories {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(32);
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        padding: rem(32);
+        border: var(--border-base);
+        cursor: pointer;
+
+        @include tablet {
+            padding: rem(20);
+        }
+
+        @include hover {
+            background-color: var(--color-yellow);
+
+            .card-categories__title-link {
+                color: var(--color-purple);
+            }
+        }
+    }
+
+    &__title {
+        &-link {
+            &:not(:last-child) {
+                margin-bottom: rem(4);
+            }
+        }
+    }
+}
