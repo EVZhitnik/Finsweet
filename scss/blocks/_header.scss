@@ -14,7 +14,7 @@
 
     @keyframes scrolling-header {
         to {
-            box-shadow: 0 0 1rem 0 var(--color-dark-40);
+            box-shadow: 0 0 1rem 0 var(--color-black);
         }
     }
 
@@ -23,6 +23,16 @@
         justify-content: space-between;
         align-items: center;
         column-gap: rem(16);
+    }
+
+    &__logo {
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
     }
 
     &__body {

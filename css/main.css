@@ -190,11 +190,6 @@ label {
   (за исключением тех, у которых уже указан
   атрибут fill со значением 'none' или начинается с 'url')
  */
-:where([fill]:not([fill=none],
-[fill^=url])) {
-  fill: currentColor;
-}
-
 /**
   Приводим к единому цвету svg-элементы
   (за исключением тех, у которых уже указан
@@ -398,7 +393,7 @@ a[class] {
 }
 @keyframes scrolling-header {
   to {
-    box-shadow: 0 0 1rem 0 var(--color-dark-40);
+    box-shadow: 0 0 1rem 0 var(--color-black);
   }
 }
 .header__inner {
@@ -406,6 +401,16 @@ a[class] {
   justify-content: space-between;
   align-items: center;
   column-gap: 1rem;
+}
+@media (any-hover: hover) {
+  .header__logo:hover svg path {
+    fill: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .header__logo:active svg path {
+    fill: var(--color-accent);
+  }
 }
 .header__body {
   display: flex;
