@@ -13,6 +13,13 @@
 @use 'blocks/post-meta.scss';
 @use 'blocks/button-base.scss';
 
+@use 'blocks/home-posts.scss';
+@use 'blocks/posts-featured.scss';
+@use 'blocks/posts-all.scss';
+@use 'blocks/posts-about.scss';
+@use 'blocks/subtitle-base.scss';
+@use 'blocks/posts-mision.scss';
+
 // .header,
 // main > *:not(:last-child),
 // .footer {

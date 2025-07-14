@@ -3,5 +3,16 @@
 .post-meta {
     &__accent {
         color: var(--color-yellow);
+
+        &--purple {
+            color: var(--color-purple);
+        }
+    }
+
+    &--base {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 1.43;
+        color: var(--color-dark-grey);
     }
 }
