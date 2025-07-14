@@ -1,0 +1,70 @@
+@use 'helpers' as *;
+
+.home-posts {
+    display: grid;
+    row-gap: rem(128);
+    padding-block: rem(128);
+
+    @include mobile {
+        padding-block: rem(50);
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: 57.26% 40.39%;
+        gap: rem(32);
+
+        @include laptop {
+            gap: rem(20);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: rem(40);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(128);
+
+            @include mobile {
+                margin-bottom: rem(50);
+            }
+        }
+    }
+
+    &__wrapper {
+        &-footer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(61);
+            background-color: var(--color-lavender);
+            padding: rem(96) rem(80) rem(112);
+
+            @include mobile {
+                grid-template-columns: 1fr;
+                padding: 0;
+                padding-top: rem(50);
+                gap: rem(30);
+            }
+        }
+    }
+
+    &__footer {
+        position: relative;
+        padding-top: rem(23);
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 82.89%;
+            height: rem(23);
+            background: linear-gradient(
+                to right,
+                rgba(255, 208, 80, 1) 73.42%, 
+                rgba(89, 46, 169, 1) 26.58%
+            );
+        }
+    }
+}

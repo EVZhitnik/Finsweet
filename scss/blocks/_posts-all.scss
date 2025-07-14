@@ -1,0 +1,43 @@
+@use 'helpers' as *;
+
+.posts-all {
+    display: grid; 
+    row-gap: rem(32);
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        color: var(--color-purple);
+
+        @include hover {
+            color: var(--color-accent);
+        }
+    }
+
+    &__item {
+        padding: rem(32) rem(32) rem(25);
+
+        @include laptop {
+            padding: rem(25);
+        }
+    }
+
+    &__content {
+        display: grid;
+        row-gap: rem(8);
+    }
+
+    &__title {
+        &-link {
+            display: inline-block;
+            max-width: rem(369);
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+}

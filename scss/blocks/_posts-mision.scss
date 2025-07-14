@@ -1,0 +1,29 @@
+@use 'helpers' as *;
+
+.posts-mision {
+    &__content {
+        max-width: rem(516);
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__subtitle {
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__title {
+        max-width: rem(481);
+
+        @include mobile {
+            max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+}

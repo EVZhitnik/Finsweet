@@ -1,0 +1,37 @@
+@use 'helpers' as *;
+
+.posts-about {
+    &__content {
+        max-width: rem(515);
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__subtitle {
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__title {
+        max-width: rem(485);
+
+        @include mobile {
+            max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__link {
+        font-family: var(--font-family-heading);
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: 1.78;
+        color: var(--color-purple);
+    }
+}

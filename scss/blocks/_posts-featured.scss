@@ -1,0 +1,31 @@
+@use 'helpers' as *;
+
+.posts-featured {
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__content {
+        padding: rem(32);
+        border: var(--border-base);
+    }
+
+    &__image {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__text {
+        display: grid;
+        row-gap: rem(16);
+        
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+}
