@@ -3,11 +3,6 @@
 .home-posts {
     display: grid;
     row-gap: rem(128);
-    padding-block: rem(128);
-
-    @include mobile {
-        padding-block: rem(50);
-    }
 
     &__header {
         display: grid;

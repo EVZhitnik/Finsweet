@@ -89,6 +89,16 @@ a {
     }
 }
 
+section {
+    &:not(:last-child) {
+        margin-bottom: rem(128);
+
+        @include mobile {
+            margin-bottom: rem(50);
+        }
+    }
+}
+
 :focus-visible {
     outline: rem(2) dashed var(--color-light);
     outline-offset: rem(4);

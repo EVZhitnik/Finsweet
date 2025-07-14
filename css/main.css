@@ -373,6 +373,15 @@ a[class] {
   text-decoration: none;
 }
 
+section:not(:last-child) {
+  margin-bottom: 8rem;
+}
+@media (width <= 47.99875rem) {
+  section:not(:last-child) {
+    margin-bottom: 3.125rem;
+  }
+}
+
 :focus-visible {
   outline: 0.125rem dashed var(--color-light);
   outline-offset: 0.25rem;
@@ -631,12 +640,6 @@ a[class] {
 .home-posts {
   display: grid;
   row-gap: 8rem;
-  padding-block: 8rem;
-}
-@media (width <= 47.99875rem) {
-  .home-posts {
-    padding-block: 3.125rem;
-  }
 }
 .home-posts__header {
   display: grid;
@@ -815,15 +818,6 @@ a[class] {
 }
 .posts-mision__title:not(:last-child) {
   margin-bottom: 1rem;
-}
-
-.home-categories {
-  padding-bottom: 8rem;
-}
-@media (width <= 47.99875rem) {
-  .home-categories {
-    padding-block: 3.125rem;
-  }
 }
 
 .header-categories:not(:last-child) {

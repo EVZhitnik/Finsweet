@@ -1,9 +1,4 @@
 @use 'helpers' as *;
 
 .home-categories {
-    padding-bottom: rem(128);
-
-    @include mobile {
-        padding-block: rem(50);
-    }
 }
