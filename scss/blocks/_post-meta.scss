@@ -1,0 +1,7 @@
+@use 'helpers' as *;
+
+.post-meta {
+    &__accent {
+        color: var(--color-yellow);
+    }
+}

@@ -1,0 +1,12 @@
+@use 'helpers' as *;
+
+.heading-display {
+    @include fluid-text(56, 32);
+
+    display: inline-block;
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: -0.04em;
+    color: var(--color-light);
+}
