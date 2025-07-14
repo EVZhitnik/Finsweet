@@ -1,0 +1,23 @@
+@use 'helpers' as *;
+
+.header-categories {
+    &:not(:last-child) {
+        margin-bottom: rem(250);
+
+        @include tablet {
+            margin-bottom: rem(50);
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: rem(48);
+
+            @include mobile {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+}
