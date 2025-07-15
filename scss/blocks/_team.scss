@@ -2,6 +2,11 @@
 .team {
     text-align: center;
     padding-inline: rem(16);
+    margin-bottom: rem(128);
+
+    @include mobile {
+        margin-bottom: rem(50);
+    }
 
     &__title,
     &__description {

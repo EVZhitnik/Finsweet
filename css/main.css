@@ -973,6 +973,11 @@ section:not(:last-child) {
 .authors-card__item {
   padding: 2.5rem 1.75rem;
 }
+@media (width <= 30.06125rem) {
+  .authors-card__item {
+    padding: 1.25rem;
+  }
+}
 .authors-card__item:nth-child(1) {
   background-color: var(--color-light-grey);
 }
@@ -1037,6 +1042,11 @@ section:not(:last-child) {
   .authors-brands {
     flex-direction: column;
     row-gap: 1.875rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .authors-brands {
+    padding-block: 3.125rem;
   }
 }
 .authors-brands__text {
@@ -1107,6 +1117,12 @@ section:not(:last-child) {
     flex-direction: column;
   }
 }
+@media (width <= 30.06125rem) {
+  .swiper-authors-slide__body {
+    padding-block: 3.125rem;
+    padding-inline: 1.25rem;
+  }
+}
 .swiper-authors-slide__content {
   padding-top: 0.75rem;
   padding-right: 5rem;
@@ -1173,17 +1189,20 @@ section:not(:last-child) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 3.75rem;
 }
 @media (width <= 63.99875rem) {
   .swiper-authors-slide__accent {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 0.9375rem;
+    height: auto;
   }
 }
 .swiper-authors-navigation {
   display: flex;
   column-gap: 1.5rem;
+  align-self: start;
 }
 .swiper-authors-button-prev, .swiper-authors-button-next {
   width: 3rem;
@@ -1254,6 +1273,12 @@ section:not(:last-child) {
 .team {
   text-align: center;
   padding-inline: 1rem;
+  margin-bottom: 8rem;
+}
+@media (width <= 47.99875rem) {
+  .team {
+    margin-bottom: 3.125rem;
+  }
 }
 .team__title, .team__description {
   margin: 0 auto;

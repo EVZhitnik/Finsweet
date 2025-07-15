@@ -21,8 +21,11 @@
     }
 
     &__item {
-
         padding: rem(40) rem(28);
+
+        @include mobile-s {
+            padding: rem(20);
+        }
 
         &:nth-child(1) {
             background-color: var(--color-light-grey);

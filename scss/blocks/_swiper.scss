@@ -16,6 +16,11 @@
                 @include mobile {
                     flex-direction: column;
                 }
+                
+                @include mobile-s {
+                    padding-block: rem(50);
+                    padding-inline: rem(20);
+                }
             }
 
             &__content {
@@ -89,18 +94,21 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                height: rem(60);
 
                 @include tablet {
                     flex-direction: column;
                     align-items: flex-start;
                     row-gap: rem(15);
+                    height: auto;
                 }
             }
         }
 
         &-navigation {
             display: flex;
-            column-gap: rem(24);    
+            column-gap: rem(24);
+            align-self: start;    
         }
 
         &-button {
