@@ -1,0 +1,24 @@
+@use 'helpers' as *;
+
+.person {
+    &__body {
+        display: flex;
+        column-gap: rem(12);
+    }
+
+    &__image {
+        align-self: start;
+    }
+
+    &__info {
+        display: grid;
+    }
+
+    &__name {
+        font-family: var(--font-family-heading);
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: 1.33;
+        color: var(--color-black);
+    }
+}

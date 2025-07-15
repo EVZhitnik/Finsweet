@@ -1,0 +1,21 @@
+@use 'helpers' as *;
+
+.soc1als-authors {
+    &__list {
+        display: flex;
+        justify-content: center;
+        column-gap: rem(16);
+    }
+
+    &__item {
+        cursor: pointer;
+
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
+    }
+}

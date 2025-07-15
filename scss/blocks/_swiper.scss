@@ -1,0 +1,157 @@
+@use 'helpers' as *;
+
+.swiper {
+    &-authors{
+        &-slide {
+            &__body {
+                display: flex;
+                justify-content: center;
+                padding: rem(80) rem(112) rem(74);
+                background-color: var(--color-lavender);
+
+                @include tablet {
+                    padding-inline: rem(50);
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+
+            &__content {
+                padding-top: rem(12);
+                padding-right: rem(80);
+                border-right: var(--border-base);
+                max-width: rem(349);
+
+                @include tablet {
+                    padding-right: rem(50);
+                }
+
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 100%;
+                    padding-right: 0;
+                    padding-bottom: rem(25);
+                    border-right: none;
+                    border-bottom: var(--border-base);
+                }
+            }
+
+            &__subtitle {
+                &:not(:last-child) {
+                    margin-bottom: rem(12);
+                }
+            }
+
+            &__title {
+                &-link {
+                    display: inline-block;
+                    cursor: pointer;
+
+                    &:not(:last-child) {
+                        margin-bottom: rem(16);
+                    }
+                }
+            }
+
+            &__quote {
+                padding-left: rem(96);
+
+                @include tablet {
+                    padding-left: rem(50);
+                }
+
+                @include mobile {
+                    padding-left: 0;
+                    padding-top: rem(25);
+                }
+            }
+
+            &__blockquote {
+                max-width: rem(469);
+                
+                &:not(:last-child) {
+                    margin-bottom: rem(114);
+
+                    @include tablet {
+                        margin-bottom: rem(80);
+                    }
+
+                    @include mobile {
+                        margin-bottom: rem(50);
+                    }
+                }
+            }
+
+            &__accent {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include tablet {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    row-gap: rem(15);
+                }
+            }
+        }
+
+        &-navigation {
+            display: flex;
+            column-gap: rem(24);    
+        }
+
+        &-button {
+            &-prev,
+            &-next {
+                @include square(rem(48));
+
+                border-radius: 50%;
+                transition-duration: var(--transition-duration);
+                cursor: pointer;
+            }
+
+            &-prev {
+                background: 
+                    url('/icon/slider/arrow-prev.svg') 
+                    center/rem(20) auto
+                    no-repeat
+                ;
+                background-color: var(--color-yellow);
+
+                @include hover {
+                    @include square(rem(62));
+
+                    background: 
+                        url('/icon/slider/arrow-hover-prev.svg') 
+                        center/rem(26) auto
+                        no-repeat
+                    ;
+                    background-color: var(--color-black);
+                }
+            }
+
+            &-next {
+                background: 
+                    url('/icon/slider/arrow-next.svg') 
+                    center/rem(20) auto
+                    no-repeat
+                ;
+                background-color: var(--color-yellow);
+
+                @include hover {
+                    @include square(rem(62));
+
+                    background: 
+                        url('/icon/slider/arrow-hover-next.svg') 
+                        center/rem(26) auto
+                        no-repeat
+                    ;
+                    background-color: var(--color-black);
+                }
+            }
+        }
+    }
+}

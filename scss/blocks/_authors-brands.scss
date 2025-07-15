@@ -1,0 +1,71 @@
+@use 'helpers' as *;
+
+.authors-brands {
+    display: flex;
+    align-items: center;
+    column-gap: rem(97);
+    padding-block: rem(96);
+
+        @include laptop {
+            justify-content: center;
+            column-gap: rem(80);
+        }
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(30);
+        }
+
+    &__text {
+        display: grid;
+    }
+
+    &__we {
+        &-are {
+            font-size: rem(14);
+            line-height: 1.43;
+            color: var(--color-medium-grey);
+            opacity: 0.6;
+        }
+    }
+
+    &__featured {
+        font-family: var(--font-family-heading);
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: 1.33;
+        color: var(--color-medium-grey);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: rem(73);
+        row-gap: rem(15);
+
+        @include laptop {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: rem(50);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @include mobile-s {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        opacity: 0.8;
+        
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
+    }
+}
