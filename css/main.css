@@ -1236,3 +1236,23 @@ section:not(:last-child) {
   line-height: 1.33;
   color: var(--color-black);
 }
+
+.team {
+  text-align: center;
+  padding-inline: 1rem;
+}
+.team__title, .team__description {
+  margin: 0 auto;
+}
+.team__title {
+  max-width: 25.875rem;
+}
+.team__title:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.team__description {
+  max-width: 25.3125rem;
+}
+.team__description:not(:last-child) {
+  margin-bottom: 2rem;
+}
