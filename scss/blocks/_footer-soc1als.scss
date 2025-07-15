@@ -1,0 +1,27 @@
+@use 'helpers' as *;
+
+.footer-soc1als {
+    &__list {
+        display: flex;
+        column-gap: rem(26);
+        padding-top: rem(12);
+    }
+
+    &__item {
+        cursor: pointer;
+        
+        svg {
+            path {
+                fill: var(--color-medium-grey);
+            }
+        }
+
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
+    }
+}

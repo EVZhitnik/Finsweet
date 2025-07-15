@@ -1,0 +1,29 @@
+@use 'helpers' as *;
+
+.form {
+    display: flex;
+    gap: rem(24);
+            
+    @include mobile-s {
+        flex-direction: column;
+    }
+
+    &__cell {
+        &-input {
+            width: max(rem(150), 22.43vw);
+            padding: rem(14) rem(25);
+            border: none;
+            border: var(--border-base);
+            background-color: transparent;
+            color: var(--color-light);
+            
+            @include mobile-s {
+                width: rem(300);
+            }
+        }
+    }
+
+    &__button {
+        align-self: start;
+    }
+}
