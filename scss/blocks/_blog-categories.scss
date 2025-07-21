@@ -1,0 +1,7 @@
+.blog-categories {
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+}

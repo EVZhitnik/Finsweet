@@ -18,6 +18,7 @@
     &__item {
         padding: rem(32);
         border: var(--border-base);
+        transition-duration: var(--transition-duration);
         cursor: pointer;
 
         @include tablet {
