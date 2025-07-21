@@ -875,6 +875,7 @@ section:not(:last-child) {
 .card-categories__item {
   padding: 2rem;
   border: var(--border-base);
+  transition-duration: var(--transition-duration);
   cursor: pointer;
 }
 @media (width <= 63.99875rem) {
@@ -1551,8 +1552,6 @@ section:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.header,
-main > *:not(:last-child),
-.footer {
-  display: none !important;
+.blog-categories__title:not(:last-child) {
+  margin-bottom: 3rem;
 }

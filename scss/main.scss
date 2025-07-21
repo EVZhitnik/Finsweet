@@ -44,8 +44,10 @@
 @use 'blocks/blog-posts.scss';
 @use 'blocks/card-post.scss';
 
-.header,
-main > *:not(:last-child),
-.footer {
-    display: none !important;
-}
+@use 'blocks/blog-categories.scss';
+
+// .header,
+// main > *:not(:last-child),
+// .footer {
+//     display: none !important;
+// }
