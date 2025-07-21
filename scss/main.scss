@@ -39,8 +39,10 @@
 @use 'blocks/form.scss';
 @use 'blocks/footer-soc1als.scss';
 
-// .header,
-// main > *:not(:last-child),
-// .footer {
-//     display: none !important;
-// }
+@use 'blocks/blog-hero.scss';
+
+.header,
+main > *:not(:last-child),
+.footer {
+    display: none !important;
+}
