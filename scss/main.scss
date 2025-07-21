@@ -41,6 +41,9 @@
 
 @use 'blocks/blog-hero.scss';
 
+@use 'blocks/blog-posts.scss';
+@use 'blocks/card-post.scss';
+
 .header,
 main > *:not(:last-child),
 .footer {

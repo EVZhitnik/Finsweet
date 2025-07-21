@@ -3,6 +3,10 @@
 .blog-hero {
     background-color: var(--color-light-yellow);
 
+    &:not(:last-child) {
+        margin-bottom: rem(64);
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;

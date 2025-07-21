@@ -1,0 +1,49 @@
+@use 'helpers' as *;
+
+.blog-posts {
+    &:not(:last-child) {
+        margin-bottom: rem(64);
+    }
+
+    &__inner {
+        display: grid;
+        gap: rem(64);
+
+        @include mobile {
+           gap: rem(32); 
+        }
+    }
+
+    &__title {
+       padding-bottom: rem(32);
+       border-bottom: var(--border-base); 
+    }
+
+    &__navigation {
+        @include flex-center;
+
+        column-gap: rem(17);
+    }
+
+    &__link {
+        &-prev {
+            &::before {
+                content: '<';
+                padding-right: rem(5);
+            }
+            
+            &.is-active {
+                font-size: rem(24);
+                color: var(--color-medium-grey);
+                pointer-events: none;
+            }
+        }
+        
+        &-next {
+            &::after {
+                content: '>';
+                padding-left: rem(5);
+            } 
+        }
+    }
+}

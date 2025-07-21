@@ -7,4 +7,8 @@
     letter-spacing: 0.19em;
     text-transform: uppercase;
     color: var(--color-black);
+    
+    &--purple {
+        color: var(--color-purple);
+    }
 }
