@@ -1,0 +1,67 @@
+@use 'helpers' as *;
+
+.blog-hero {
+    background-color: var(--color-light-yellow);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(30);
+        padding-block: rem(80);
+
+        @include tablet {
+            flex-direction: column;
+        }
+        
+        @include mobile {
+            padding-block: rem(50);
+        }
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: rem(624);
+
+        @include tablet {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__heading,
+    &__meta {
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__description {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }  
+    }
+
+    &__link {
+        align-self: start;
+
+        @include tablet {
+            align-self: center;
+        }
+    }
+}
