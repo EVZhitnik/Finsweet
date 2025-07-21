@@ -32,7 +32,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: rem(61);
-            background-color: var(--color-lavender);
+            background-color: var(--color-light-yellow);
             padding: rem(96) rem(80) rem(112);
 
             @include mobile {

@@ -683,7 +683,7 @@ section:not(:last-child) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3.8125rem;
-  background-color: var(--color-lavender);
+  background-color: var(--color-light-yellow);
   padding: 6rem 5rem 7rem;
 }
 @media (width <= 47.99875rem) {
