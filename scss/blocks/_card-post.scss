@@ -1,0 +1,37 @@
+@use 'helpers' as *;
+
+.card-post {
+    &__list {
+        display: grid;
+        gap: rem(64);
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        gap: rem(32);
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__content {
+        display: grid;
+        max-width: rem(624);
+    }
+
+    &__subtitle {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__title {
+        &-link {
+            &:not(:last-child) {
+                margin-bottom: rem(16);
+            }
+        }
+    }
+}
