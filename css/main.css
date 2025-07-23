@@ -995,6 +995,18 @@ section:not(:last-child) {
 .authors-card__item:nth-child(4) {
   background-color: var(--color-light-grey);
 }
+.authors-card__item:nth-child(5) {
+  background-color: var(--color-light-grey);
+}
+.authors-card__item:nth-child(6) {
+  background-color: var(--color-light-grey);
+}
+.authors-card__item:nth-child(7) {
+  background-color: var(--color-light-grey);
+}
+.authors-card__item:nth-child(8) {
+  background-color: var(--color-light-grey);
+}
 .authors-card__body {
   display: flex;
   flex-direction: column;
@@ -1887,10 +1899,4 @@ section:not(:last-child) {
   .about-team__content {
     max-width: 100%;
   }
-}
-
-.header,
-main > *:not(:last-child),
-.footer {
-  display: none !important;
 }
