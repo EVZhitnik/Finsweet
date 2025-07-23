@@ -1,0 +1,28 @@
+@use 'helpers' as *;
+
+.marked-text {
+    &:not(:last-child) {
+        margin-bottom: rem(24);
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: rem(12);
+        color: var(--color-black);
+        opacity: 0.78;
+
+        &:not(:last-child) {
+            margin-bottom: rem(2);
+        }
+
+        &::before {
+            @include square(rem(5));
+
+            content: '';
+            border-radius: 100%;
+            background-color: var(--color-marker);
+        }
+    }
+}

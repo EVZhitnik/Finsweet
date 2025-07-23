@@ -20,5 +20,9 @@
         font-size: rem(24);
         line-height: 1.33;
         color: var(--color-black);
+
+        &--purple {
+            color: var(--color-purple);
+        }
     }
 }
