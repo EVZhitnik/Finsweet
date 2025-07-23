@@ -53,8 +53,10 @@
 
 @use 'blocks/about-hero.scss';
 
-.header,
-main > *:not(:last-child),
-.footer {
-    display: none !important;
-}
+@use 'blocks/about-team.scss';
+
+// .header,
+// main > *:not(:last-child),
+// .footer {
+//     display: none !important;
+// }
