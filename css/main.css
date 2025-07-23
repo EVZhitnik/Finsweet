@@ -1888,3 +1888,9 @@ section:not(:last-child) {
     max-width: 100%;
   }
 }
+
+.header,
+main > *:not(:last-child),
+.footer {
+  display: none !important;
+}
