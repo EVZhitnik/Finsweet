@@ -49,6 +49,8 @@
 @use 'blocks/blog-post.scss';
 @use 'blocks/marked-text.scss';
 
+@use 'blocks/read.scss';
+
 .header,
 main > *:not(:last-child),
 .footer {

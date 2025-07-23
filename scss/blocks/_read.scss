@@ -1,0 +1,41 @@
+@use 'helpers' as *;
+
+.read {
+    &__inner {
+        display: grid;
+        row-gap: rem(64);
+        padding-bottom: rem(64);
+        border-bottom: var(--border-base);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(32);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__body {
+        display: grid;
+        row-gap: rem(32);
+    }
+
+    &__image {
+        justify-self: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+    }
+
+    &__title {
+        &-link {
+            flex-grow: 1;
+        }
+    }
+}

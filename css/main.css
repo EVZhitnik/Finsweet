@@ -1622,6 +1622,38 @@ section:not(:last-child) {
   background-color: var(--color-marker);
 }
 
+.read__inner {
+  display: grid;
+  row-gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: var(--border-base);
+}
+.read__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (width <= 47.99875rem) {
+  .read__list {
+    grid-template-columns: 1fr;
+  }
+}
+.read__body {
+  display: grid;
+  row-gap: 2rem;
+}
+.read__image {
+  justify-self: center;
+}
+.read__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.read__title-link {
+  flex-grow: 1;
+}
+
 .header,
 main > *:not(:last-child),
 .footer {
