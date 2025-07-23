@@ -1,0 +1,80 @@
+@use 'helpers' as *;
+
+.about-team {
+    &__list {
+        display: grid;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(70);
+
+        @include tablet {
+            column-gap: rem(30);
+        }
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(30);
+        }
+
+        &:nth-child(1) {
+            .about-team__image {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: rem(114);
+                    left: rem(-50);
+                    width: rem(103);
+                    height: rem(116);
+                    background: url('../icon/shapes.svg') center/contain no-repeat;
+
+                    @include tablet {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+            justify-content: start;
+            column-gap: rem(64);
+
+            @include tablet {
+                column-gap: rem(30);
+            }
+
+            @include mobile {
+                flex-direction: column;
+                row-gap: rem(30);
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(128);
+
+            @include mobile {
+                margin-bottom: rem(50);
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        row-gap: rem(16);
+        max-width: rem(510);
+
+        @include tablet {
+            max-width: rem(410);
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}
