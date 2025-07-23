@@ -1653,9 +1653,3 @@ section:not(:last-child) {
 .read__title-link {
   flex-grow: 1;
 }
-
-.header,
-main > *:not(:last-child),
-.footer {
-  display: none !important;
-}
