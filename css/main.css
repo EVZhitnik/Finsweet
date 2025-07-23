@@ -241,6 +241,7 @@ svg * {
   --color-lavender: #FBF6EA;
   --color-footer: rgba(255, 255, 255, 0.1);
   --color-accent: #EDC14A;
+  --color-marker: #494A53;
   --border-base: 0.0625rem solid rgba(109, 110, 118, 0.3);
   --border-form: 0.0625rem solid var(--color-dark-grey);
   --border-categories: 0.09375rem solid #C1C1C3;
@@ -1273,6 +1274,9 @@ section:not(:last-child) {
   line-height: 1.33;
   color: var(--color-black);
 }
+.person__name--purple {
+  color: var(--color-purple);
+}
 
 .team {
   text-align: center;
@@ -1554,4 +1558,98 @@ section:not(:last-child) {
 
 .blog-categories__title:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+.blog-post {
+  padding-top: 8rem;
+}
+.blog-post__inner {
+  display: grid;
+  justify-items: center;
+  row-gap: 4rem;
+  padding-inline: 1rem;
+}
+.blog-post__header {
+  max-width: 48rem;
+}
+.blog-post__person:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.blog-post__title:not(:last-child) {
+  margin-bottom: 2.125rem;
+}
+.blog-post__startup {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.blog-post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.blog-post__list {
+  display: grid;
+  row-gap: 3rem;
+  max-width: 52.6875rem;
+}
+.blog-post__heading-post:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.blog-post__heading-post p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.marked-text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.marked-text__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  color: var(--color-black);
+  opacity: 0.78;
+}
+.marked-text__item:not(:last-child) {
+  margin-bottom: 0.125rem;
+}
+.marked-text__item::before {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  content: "";
+  border-radius: 100%;
+  background-color: var(--color-marker);
+}
+
+.read__inner {
+  display: grid;
+  row-gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: var(--border-base);
+}
+.read__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (width <= 47.99875rem) {
+  .read__list {
+    grid-template-columns: 1fr;
+  }
+}
+.read__body {
+  display: grid;
+  row-gap: 2rem;
+}
+.read__image {
+  justify-self: center;
+}
+.read__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.read__title-link {
+  flex-grow: 1;
 }

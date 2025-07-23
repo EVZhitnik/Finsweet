@@ -1,0 +1,62 @@
+@use 'helpers' as *;
+
+.blog-post {
+    padding-top: rem(128);
+
+    &__inner {
+        display: grid;
+        justify-items: center;
+        row-gap: rem(64);
+        padding-inline: rem(16);
+    }
+
+    &__header {
+        max-width: rem(768);
+    }
+
+    &__person {
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(34);
+        }
+    }
+
+    &__startup {
+        display: flex;
+        align-items: center;
+        column-gap: rem(8);
+    }
+
+    &__image {
+        img {
+            @include square(100%);
+            
+            object-fit: contain;
+        }
+    }
+
+    &__list {
+        display: grid;
+        row-gap: rem(48);
+        max-width: rem(843);
+    }
+
+    &__heading {
+        &-post {
+            &:not(:last-child) {
+                margin-bottom: rem(16);
+            }
+
+            p {
+                &:not(:last-child) {
+                    margin-bottom: rem(24);
+                }
+            }
+        }
+    }
+}
