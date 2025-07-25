@@ -1,0 +1,26 @@
+@use 'helpers' as *;
+
+.busines-hero {
+    background-color: var(--color-light-yellow);
+
+    &__inner {
+        max-width: rem(515);
+        text-align: center;
+        margin: 0 auto;
+        padding: rem(80) rem(16);
+    }
+
+    &__title {
+        color: var(--color-black);
+
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__description {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+}
