@@ -60,8 +60,10 @@
 @use 'blocks/business-main.scss';
 @use 'blocks/tags-categories.scss';
 
-// .header,
-// main > *:not(:last-child),
-// .footer {
-//     display: none !important;
-// }
+@use 'blocks/author-hero.scss';
+
+.header,
+main > *:not(:last-child),
+.footer {
+    display: none !important;
+}
