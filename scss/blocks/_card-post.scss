@@ -4,6 +4,10 @@
     &__list {
         display: grid;
         gap: rem(64);
+
+        &--busines {
+            gap: rem(32);
+        }
     }
 
     &__body {

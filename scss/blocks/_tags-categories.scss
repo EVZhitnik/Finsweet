@@ -1,0 +1,66 @@
+@use 'helpers' as *;
+
+.tags-categories {
+    display: grid;
+    row-gap: rem(24);
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(16);
+
+        @include mobile-s {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        @include flex-center;
+
+        border: var(--border-tag);
+        border-radius: var(--border-radius);
+        height: rem(48);
+        transition-duration: var(--transition-duration);
+        cursor: pointer;
+
+        @include hover {
+            background-color: var(--color-accent);
+        }
+
+        &:nth-child(1) {
+            width: rem(133);
+        }
+        &:nth-child(2) {
+            width: rem(149);
+        }
+        &:nth-child(3) {
+            width: rem(101);
+        }
+        &:nth-child(4) {
+            width: rem(181);
+        }
+        &:nth-child(5) {
+            width: rem(178);
+        }
+        &:nth-child(6) {
+            width: rem(104);
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            @include mobile-s {
+               width: 100%; 
+            } 
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+}

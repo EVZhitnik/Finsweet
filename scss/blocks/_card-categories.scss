@@ -1,6 +1,11 @@
 @use 'helpers' as *;
 
 .card-categories {
+    &--busines {
+        &:not(:last-child) {
+            margin-bottom: rem(48);
+        }
+    }
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -12,6 +17,19 @@
 
         @include mobile-s {
             grid-template-columns: 1fr;
+        }
+
+        &--busines {
+            grid-template-columns: 1fr;
+            gap: rem(24);
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile-s {
+                grid-template-columns: 1fr;
+            }
         }
     }
 
@@ -32,6 +50,32 @@
                 color: var(--color-purple);
             }
         }
+
+        &--busines {
+            padding: rem(24);
+
+            &.is-active {
+                background-color: var(--color-yellow);
+            }
+        }
+    }
+
+    &__content {
+        &--busines {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: rem(16);
+            row-gap: rem(5);
+
+            @include tablet {
+                column-gap: rem(10);;
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
     }
 
     &__title {
