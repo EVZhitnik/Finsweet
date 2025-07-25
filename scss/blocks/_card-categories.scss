@@ -1,7 +1,7 @@
 @use 'helpers' as *;
 
 .card-categories {
-    &--busines {
+    &--business {
         &:not(:last-child) {
             margin-bottom: rem(48);
         }
@@ -19,7 +19,7 @@
             grid-template-columns: 1fr;
         }
 
-        &--busines {
+        &--business {
             grid-template-columns: 1fr;
             gap: rem(24);
 
@@ -51,7 +51,7 @@
             }
         }
 
-        &--busines {
+        &--business {
             padding: rem(24);
 
             &.is-active {
@@ -61,7 +61,7 @@
     }
 
     &__content {
-        &--busines {
+        &--business {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
