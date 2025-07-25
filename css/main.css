@@ -1901,21 +1901,21 @@ section:not(:last-child) {
   }
 }
 
-.busines-home {
+.busines-hero {
   background-color: var(--color-light-yellow);
 }
-.busines-home__inner {
+.busines-hero__inner {
   max-width: 32.1875rem;
   text-align: center;
   margin: 0 auto;
   padding: 5rem 1rem;
 }
-.busines-home__title {
+.busines-hero__title {
   color: var(--color-black);
 }
-.busines-home__title:not(:last-child) {
+.busines-hero__title:not(:last-child) {
   margin-bottom: 1rem;
 }
-.busines-home__description:not(:last-child) {
+.busines-hero__description:not(:last-child) {
   margin-bottom: 2rem;
 }
