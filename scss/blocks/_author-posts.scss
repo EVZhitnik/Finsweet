@@ -1,0 +1,9 @@
+.author-posts {
+    margin-bottom: 8rem;
+    
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
+}
