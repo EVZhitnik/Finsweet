@@ -1,0 +1,90 @@
+@use 'helpers' as *;
+
+.contact {
+    padding-block: rem(128);
+
+    @include mobile {
+        padding-block: rem(50);
+    }
+
+    &__header {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: rem(64);
+        }
+    }
+
+    &__subtitle {
+        &:not(:last-child) {
+            margin-bottom: rem(12);
+        }
+    }
+    
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__body {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: rem(30);
+       padding: rem(48) rem(64);
+       background-color: var(--color-purple);
+
+        @include mobile {
+            padding: rem(30);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__working,
+    &__us {
+        &-cell {
+            max-width: rem(294);
+            font-size: rem(14);
+            line-height: 1.43;
+            color: var(--color-light);
+            opacity: 0.6;
+            padding-bottom: rem(16);
+            border-bottom: var(--border-base);
+        }
+    }
+
+    &__working {
+        &-week,
+        &-time,
+        &-text {
+            color: var(--color-light);
+        }
+
+        &-week {
+           padding-top: rem(16); 
+        }
+
+        &-text {
+            opacity: 0.6;
+        }
+    }
+
+    &__us {
+        &-num {
+            color: var(--color-light);
+            padding-top: rem(16);
+        }
+
+        &-email {
+            color: var(--color-light);
+            opacity: 0.6; 
+        }
+    }
+}
