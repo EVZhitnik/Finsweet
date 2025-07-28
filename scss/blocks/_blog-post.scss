@@ -3,6 +3,10 @@
 .blog-post {
     padding-top: rem(128);
 
+    @include mobile {
+        padding-top: rem(50);
+    }
+
     &__inner {
         display: grid;
         justify-items: center;

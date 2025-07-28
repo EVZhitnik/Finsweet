@@ -709,7 +709,7 @@ section:not(:last-child) {
 @media (width <= 47.99875rem) {
   .home-posts__wrapper-footer {
     grid-template-columns: 1fr;
-    padding: 0;
+    padding: 1.25rem;
     padding-top: 3.125rem;
     gap: 1.875rem;
   }
@@ -1636,6 +1636,11 @@ section:not(:last-child) {
 
 .blog-post {
   padding-top: 8rem;
+}
+@media (width <= 47.99875rem) {
+  .blog-post {
+    padding-top: 3.125rem;
+  }
 }
 .blog-post__inner {
   display: grid;
