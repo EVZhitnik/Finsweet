@@ -1,0 +1,61 @@
+@use 'helpers' as *;
+
+.field {
+    &__control,
+    &__select {
+        width: 100%;
+        color: var(--color-black);
+        border: none;
+        border: var(--border-base);
+
+        &::placeholder {
+            color: var(--color-black);
+        }
+    }
+
+    &__control {
+        padding: rem(24);
+        transition-duration: var(--transition-duration);
+
+        @include hover {
+            box-shadow: 0 0 rem(10) rem(1) var(--color-accent);
+        }
+
+        &-textarea {
+            resize: none;
+        }
+    }
+
+    &--select {
+        &-box {
+            position: relative;
+
+            @include hover {
+                box-shadow: 0 0 rem(10) rem(1) var(--color-accent);
+            }
+
+            &::after {
+                @include abs-y;
+
+                content: "";
+                right: rem(64);
+                width: rem(15);
+                height: rem(15);
+                pointer-events: none;
+                background: url('../icon/arrow-bottom-form.svg') center/contain no-repeat;
+
+                @include mobile-s {
+                    right: rem(24);
+                }
+            }
+        }
+    }
+
+    &__select {
+        padding-block: rem(24);
+        padding-left: rem(24);
+        appearance: none;
+        -webkit-appearance: none; 
+        -moz-appearance: none; 
+    }
+}

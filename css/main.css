@@ -253,6 +253,7 @@ svg * {
   --font-family-heading: "Sen", sans-serif;
   --container-width: 80rem;
   --container-width-author: 64rem;
+  --container-width-contact: 48rem;
   --container-padding-x: 1rem;
   --transition-duration: 0.2s;
 }
@@ -265,6 +266,12 @@ svg * {
 
 .container-author {
   max-width: calc(var(--container-width-author) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.container-contact {
+  max-width: calc(var(--container-width-contact) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
@@ -639,11 +646,13 @@ section:not(:last-child) {
 @media (any-hover: hover) {
   .button-base:hover {
     background-color: var(--color-black);
+    color: var(--color-light);
   }
 }
 @media (any-hover: none) {
   .button-base:active {
     background-color: var(--color-black);
+    color: var(--color-light);
   }
 }
 @media (any-hover: hover) {
@@ -657,6 +666,9 @@ section:not(:last-child) {
     background-color: var(--color-purple);
     color: var(--color-light);
   }
+}
+.button-base--form {
+  width: 100%;
 }
 
 .home-posts {
@@ -820,6 +832,9 @@ section:not(:last-child) {
 }
 .subtitle-base--purple {
   color: var(--color-purple);
+}
+.subtitle-base--fat {
+  font-weight: 900;
 }
 
 .posts-mision__content {
@@ -2132,4 +2147,139 @@ section:not(:last-child) {
 }
 .author-posts__title:not(:last-child) {
   margin-bottom: 4rem;
+}
+
+.contact {
+  padding-block: 8rem;
+}
+@media (width <= 47.99875rem) {
+  .contact {
+    padding-block: 3.125rem;
+  }
+}
+.contact__header {
+  text-align: center;
+}
+.contact__header:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.contact__subtitle:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.contact__title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.contact__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.875rem;
+  padding: 3rem 4rem;
+  background-color: var(--color-purple);
+}
+@media (width <= 47.99875rem) {
+  .contact__body {
+    padding: 1.875rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .contact__body {
+    grid-template-columns: 1fr;
+  }
+}
+.contact__body:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.contact__working-cell, .contact__us-cell {
+  max-width: 18.375rem;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: var(--color-light);
+  opacity: 0.6;
+  padding-bottom: 1rem;
+  border-bottom: var(--border-base);
+}
+.contact__working-week, .contact__working-time, .contact__working-text {
+  color: var(--color-light);
+}
+.contact__working-week {
+  padding-top: 1rem;
+}
+.contact__working-text {
+  opacity: 0.6;
+}
+.contact__us-num {
+  color: var(--color-light);
+  padding-top: 1rem;
+}
+.contact__us-email {
+  color: var(--color-light);
+  opacity: 0.6;
+}
+
+.feedback-form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.field__control, .field__select {
+  width: 100%;
+  color: var(--color-black);
+  border: none;
+  border: var(--border-base);
+}
+.field__control::placeholder, .field__select::placeholder {
+  color: var(--color-black);
+}
+.field__control {
+  padding: 1.5rem;
+  transition-duration: var(--transition-duration);
+}
+@media (any-hover: hover) {
+  .field__control:hover {
+    box-shadow: 0 0 0.625rem 0.0625rem var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .field__control:active {
+    box-shadow: 0 0 0.625rem 0.0625rem var(--color-accent);
+  }
+}
+.field__control-textarea {
+  resize: none;
+}
+.field--select-box {
+  position: relative;
+}
+@media (any-hover: hover) {
+  .field--select-box:hover {
+    box-shadow: 0 0 0.625rem 0.0625rem var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .field--select-box:active {
+    box-shadow: 0 0 0.625rem 0.0625rem var(--color-accent);
+  }
+}
+.field--select-box::after {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  content: "";
+  right: 4rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  pointer-events: none;
+  background: url("../icon/arrow-bottom-form.svg") center/contain no-repeat;
+}
+@media (width <= 30.06125rem) {
+  .field--select-box::after {
+    right: 1.5rem;
+  }
+}
+.field__select {
+  padding-block: 1.5rem;
+  padding-left: 1.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

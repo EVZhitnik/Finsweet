@@ -20,6 +20,7 @@
 
     @include hover {
         background-color: var(--color-black);
+        color: var(--color-light);
     }
 
     &--footer {
@@ -27,5 +28,9 @@
             background-color: var(--color-purple);
             color: var(--color-light);
         }
+    }
+
+    &--form {
+        width: 100%;
     }
 }

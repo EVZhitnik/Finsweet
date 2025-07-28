@@ -1,0 +1,6 @@
+@use 'helpers' as *;
+
+.feedback-form {
+    display: grid;
+    row-gap: rem(16);
+}
