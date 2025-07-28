@@ -53,12 +53,12 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 82.89%;
+            width: calc(1061 / 1280 * 100%);
             height: rem(23);
             background: linear-gradient(
                 to right,
-                rgba(255, 208, 80, 1) 73.42%, 
-                rgba(89, 46, 169, 1) 26.58%
+                rgba(255, 208, 80, 1) calc(779 / 1061 * 100%), 
+                rgba(89, 46, 169, 1) calc(282 / 1061 * 100%)
             );
         }
     }
