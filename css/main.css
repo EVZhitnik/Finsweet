@@ -1288,14 +1288,14 @@ section:not(:last-child) {
   cursor: pointer;
 }
 .swiper-authors-button-prev {
-  background: url("/icon/slider/arrow-prev.svg") center/1.25rem auto no-repeat;
+  background: url("../icon/slider/arrow-prev.svg") center/1.25rem auto no-repeat;
   background-color: var(--color-yellow);
 }
 @media (any-hover: hover) {
   .swiper-authors-button-prev:hover {
     width: 3.875rem;
     height: 3.875rem;
-    background: url("/icon/slider/arrow-hover-prev.svg") center/1.625rem auto no-repeat;
+    background: url("../icon/slider/arrow-hover-prev.svg") center/1.625rem auto no-repeat;
     background-color: var(--color-black);
   }
 }
@@ -1303,19 +1303,19 @@ section:not(:last-child) {
   .swiper-authors-button-prev:active {
     width: 3.875rem;
     height: 3.875rem;
-    background: url("/icon/slider/arrow-hover-prev.svg") center/1.625rem auto no-repeat;
+    background: url("../icon/slider/arrow-hover-prev.svg") center/1.625rem auto no-repeat;
     background-color: var(--color-black);
   }
 }
 .swiper-authors-button-next {
-  background: url("/icon/slider/arrow-next.svg") center/1.25rem auto no-repeat;
+  background: url("../icon/slider/arrow-next.svg") center/1.25rem auto no-repeat;
   background-color: var(--color-yellow);
 }
 @media (any-hover: hover) {
   .swiper-authors-button-next:hover {
     width: 3.875rem;
     height: 3.875rem;
-    background: url("/icon/slider/arrow-hover-next.svg") center/1.625rem auto no-repeat;
+    background: url("../icon/slider/arrow-hover-next.svg") center/1.625rem auto no-repeat;
     background-color: var(--color-black);
   }
 }
@@ -1323,7 +1323,7 @@ section:not(:last-child) {
   .swiper-authors-button-next:active {
     width: 3.875rem;
     height: 3.875rem;
-    background: url("/icon/slider/arrow-hover-next.svg") center/1.625rem auto no-repeat;
+    background: url("../icon/slider/arrow-hover-next.svg") center/1.625rem auto no-repeat;
     background-color: var(--color-black);
   }
 }
