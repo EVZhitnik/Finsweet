@@ -1,0 +1,27 @@
+.privacy {
+    &__header {
+        display: grid;
+        row-gap: 0.25rem;
+        text-align: center;
+        padding: 5rem 1rem;
+        background-color: var(--color-light-yellow);
+    }
+
+    &__body {
+        display: grid;
+        row-gap: 2rem;
+        padding-block: 8rem;
+
+        &-text {
+            &-header {
+                display: grid;
+                row-gap: 2rem;
+            }
+
+            &-footer {
+                display: grid;
+                row-gap: 1.5rem;
+            }
+        }
+    }
+}
